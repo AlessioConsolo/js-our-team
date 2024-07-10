@@ -33,4 +33,9 @@ let team = [
 
 for (let i = 0; i < team.length; i++) {
   console.log(team[i].name, team[i].role, team[i].image);
+
+  const infobox = document.getElementById("container");
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = `${team[i].name} - ${team[i].role} - ${team[i].image}`;
+  infobox.appendChild(newDiv);
 }
